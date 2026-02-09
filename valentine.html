@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Valentine’s Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Gallery */
+    .gallery {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .photos img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.5s, box-shadow 0.5s;
+    }
+
+    .photos img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    /* Message */
+    .message {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .message h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .message p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      animation: fadeInUp 2s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+        .photos img {
+            width: 75%;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Happy Valentine’s Day ❤️</h1>
+    <p>To the one who makes my world brighter every single day ✨</p>
+  </header>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <h2>Our Memories 📸</h2>
+    <div class="photos">
+      <!-- Replace these images with your own -->
+      <img src="we1.jpeg" alt="Memory 1">
+      <img src="we2.jpeg" alt="Memory 1">
+      <img src="we3.jpeg" alt="Memory 1">
+      <img src="we4.jpeg" alt="Memory 1">
+      <img src="we5.jpeg" alt="Memory 1">
+      <img src="we6.jpeg" alt="Memory 1">
+      <img src="we7.jpeg" alt="Memory 1">
+      <img src="we8.jpeg" alt="Memory 1">
+      <img src="we9.jpeg" alt="Memory 1">
+      <img src="we10.jpeg" alt="Memory 1">
+      <img src="we11.jpeg" alt="Memory 1">
+      <img src="we12.jpeg" alt="Memory 1">
+      <img src="we13.jpeg" alt="Memory 1">
+      <img src="we14.jpeg" alt="Memory 1">
+      <img src="we15.jpeg" alt="Memory 1">
+      <img src="we16.jpeg" alt="Memory 1">
+      <img src="we17.jpeg" alt="Memory 1">
+      <img src="we18.jpeg" alt="Memory 1">
+      <img src="we19.jpeg" alt="Memory 1">
+      <img src="we20.jpeg" alt="Memory 1">
+      <img src="we21.jpeg" alt="Memory 1">
+      <img src="we22.jpeg" alt="Memory 1">
+      <img src="we23.jpeg" alt="Memory 1">
+      <img src="we24.jpeg" alt="Memory 1">
+    </div>
+  </section>
+
+  <!-- Message -->
+  <section class="message">
+    <h2>My Love 💌</h2>
+    <p>
+      Every moment with you feels like magic.  
+      Your smile, your laugh, your presence — they mean everything to me.  
+      Thank you for being my partner, my best friend, and my favorite person.  
+      I can’t wait to make many more memories with you.  
+      <br><br>
+      Forever yours ❤️
+    </p>
+  </section>
+
+  <footer>
+    Made with ❤️ just for you
+  </footer>
+
+  <script>
+    // Floating hearts animation
+    const createHeart = () => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    };
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
